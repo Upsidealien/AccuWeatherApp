@@ -11,7 +11,7 @@ namespace AppAPITemplate
 	{
 		public FirstMenu()
 		{
-			Title = "API Template";
+			Title = "Cities";
 			Content = list;
 
 			list.ItemTapped += (sender, e) =>

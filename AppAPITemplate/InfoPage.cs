@@ -10,15 +10,11 @@ namespace AppAPITemplate
 {
 	public class InfoPage : ContentPage
 	{
-		/*
-			Displays all the information for the API menus	
-		*/
-		static Label One = new Label
+		static Label City = new Label
 		{
-			Text = "",
-			TextColor = Color.White,
-			FontSize = 50,
-			BackgroundColor = Color.Aqua,
+			Text = "-",
+			TextColor = Color.Black,
+			FontSize = 35,
 			HorizontalTextAlignment = TextAlignment.Center,
 			VerticalTextAlignment = TextAlignment.Center,
 			HorizontalOptions = LayoutOptions.Fill,
@@ -41,13 +37,56 @@ namespace AppAPITemplate
 				null
 			),
 		};
-		static Label Three = new Label
+		static Label WeatherTitle = new Label
+		{
+			Text = "Weather",
+			FontSize = 25,
+			HorizontalTextAlignment = TextAlignment.Center,
+			VerticalTextAlignment = TextAlignment.Center,
+			HorizontalOptions = LayoutOptions.FillAndExpand,
+			TextColor = Color.Black,
+			FontFamily = Device.OnPlatform(
+				"Oswald-Bold",
+				null,
+				null
+			),
+		};
+
+		static Label SunriseTitle = new Label
+		{
+			Text = "Sunrise",
+			FontSize = 25,
+			HorizontalTextAlignment = TextAlignment.Center,
+			VerticalTextAlignment = TextAlignment.Center,
+			HorizontalOptions = LayoutOptions.FillAndExpand,
+			TextColor = Color.Black,
+			FontFamily = Device.OnPlatform(
+				"Oswald-Bold",
+				null,
+				null
+			),
+		};
+
+		static Label SunsetTitle = new Label
+		{
+			Text = "Sunset",
+			FontSize = 25,
+			HorizontalTextAlignment = TextAlignment.Center,
+			VerticalTextAlignment = TextAlignment.Center,
+			HorizontalOptions = LayoutOptions.FillAndExpand,
+			TextColor = Color.Black,
+			FontFamily = Device.OnPlatform(
+				"Oswald-Bold",
+				null,
+				null
+			),
+		};
+
+		static Label Time = new Label
 		{
 			Text = "",
-			WidthRequest = 0,
+			FontSize = 25,
 			HorizontalOptions = LayoutOptions.FillAndExpand,
-			VerticalOptions = LayoutOptions.FillAndExpand,
-			VerticalTextAlignment = TextAlignment.End,
 			HorizontalTextAlignment = TextAlignment.Center,
 			TextColor = Color.Gray,
 			FontFamily = Device.OnPlatform(
@@ -56,10 +95,13 @@ namespace AppAPITemplate
 				null
 			),
 		};
-		static Label Four = new Label
+		static Label Weather = new Label
 		{
-			Text = "",
-			HorizontalOptions = LayoutOptions.Start,
+			Text = "-",
+			FontSize = 20,
+			HorizontalTextAlignment = TextAlignment.Center,
+			VerticalTextAlignment = TextAlignment.Center,
+			HorizontalOptions = LayoutOptions.FillAndExpand,
 			TextColor = Color.Gray,
 			FontFamily = Device.OnPlatform(
 				"Oswald-Bold",
@@ -67,10 +109,59 @@ namespace AppAPITemplate
 				null
 			),
 		};
-		static Label Five = new Label
+
+		static Label Sunrise = new Label
 		{
-			Text = "",
-			HorizontalOptions = LayoutOptions.Start,
+			Text = "-",
+			FontSize = 20,
+			HorizontalTextAlignment = TextAlignment.Center,
+			VerticalTextAlignment = TextAlignment.Center,
+			HorizontalOptions = LayoutOptions.FillAndExpand,
+			TextColor = Color.Gray,
+			FontFamily = Device.OnPlatform(
+				"Oswald-Bold",
+				null,
+				null
+			),
+		};
+
+		static Label Sunset = new Label
+		{
+			Text = "-",
+			FontSize = 20,
+			HorizontalTextAlignment = TextAlignment.Center,
+			VerticalTextAlignment = TextAlignment.Center,
+			HorizontalOptions = LayoutOptions.FillAndExpand,
+			TextColor = Color.Gray,
+			FontFamily = Device.OnPlatform(
+				"Oswald-Bold",
+				null,
+				null
+			),
+		};
+
+		static Label TemperatureTitle = new Label
+		{
+			Text = "Temperature",
+			FontSize = 25,
+			HorizontalTextAlignment = TextAlignment.Center,
+			VerticalTextAlignment = TextAlignment.Center,
+			HorizontalOptions = LayoutOptions.FillAndExpand,
+			TextColor = Color.Black,
+			FontFamily = Device.OnPlatform(
+				"Oswald-Bold",
+				null,
+				null
+			),
+		};
+
+		static Label Temperature = new Label
+		{
+			Text = "-",
+			FontSize = 20,
+			HorizontalTextAlignment = TextAlignment.Center,
+			VerticalTextAlignment = TextAlignment.Center,
+			HorizontalOptions = LayoutOptions.FillAndExpand,
 			TextColor = Color.Gray,
 			FontFamily = Device.OnPlatform(
 				"Oswald-Bold",
@@ -86,36 +177,16 @@ namespace AppAPITemplate
 				Spacing = 2;
 				WidthRequest = 0;
 				Orientation = StackOrientation.Horizontal;
+
 				Children.Add(new StackLayout
 				{
 					Spacing = 2,
 					WidthRequest = 0,
 					HorizontalOptions = LayoutOptions.FillAndExpand,
 					Children = {
-
-								new Label
-									{
-										Text = "Weather",
-										HorizontalOptions = LayoutOptions.Start,
-										TextColor = Color.Gray,
-										FontFamily = Device.OnPlatform(
-											"Oswald-Bold",
-											null,
-											null
-										),
-									},
-								new Label
-									{
-										Text = "Sunrise",
-										HorizontalOptions = LayoutOptions.Start,
-										TextColor = Color.Gray,
-										FontFamily = Device.OnPlatform(
-											"Oswald-Bold",
-											null,
-											null
-										),
-									},
-								},
+						SunriseTitle,
+						Sunrise
+					}
 				});
 
 				Children.Add(new StackLayout
@@ -124,9 +195,9 @@ namespace AppAPITemplate
 					WidthRequest = 0,
 					HorizontalOptions = LayoutOptions.FillAndExpand,
 					Children = {
-						Four,
-						Five
-					},
+								SunsetTitle,
+								Sunset
+					}
 				});
 
 			}
@@ -136,19 +207,37 @@ namespace AppAPITemplate
 		{
 			public InfoPageLayout()
 			{
-				HeightRequest = 70;
+				//HeightRequest = 140;
 				Spacing = 5;
 				Orientation = StackOrientation.Vertical;
+				Padding = new Thickness(30, 10, 30, 10);
 				Children.Add(
-					One
+					City
 				);
 				Children.Add(
-					Two
+					Time
 				);
+				Children.Add(new StackLayout
+					{
+						Spacing = 2,
+						WidthRequest = 0,
+						HorizontalOptions = LayoutOptions.FillAndExpand,
+						Children = {
+									WeatherTitle,
+									Weather
+					}
+				});
+				Children.Add(new StackLayout
+				{
+					Spacing = 2,
+					WidthRequest = 0,
+					HorizontalOptions = LayoutOptions.FillAndExpand,
+					Children = {
+						TemperatureTitle,
+						Temperature
+					}
+				});
 				Children.Add(new InfoPageLayoutChildren());
-				Children.Add(
-					Three
-				);
 			}
 		}
 
@@ -170,11 +259,12 @@ namespace AppAPITemplate
 
 
 			List<string> list = await CallAPI(currentItem);
-			One.Text = list[0];
-			Two.Text = list[1];
-			Three.Text = list[2];
-			Four.Text = list[3];
-			Five.Text = list[4];
+			City.Text = list[0];
+			Sunrise.Text = list[4];
+			Sunset.Text = list[2];
+			Weather.Text = list[3];
+			Time.Text = list[1];
+			Temperature.Text = list[5];
 		}
 
 		static async Task<List<string>> CallAPI(MenuItem menuItem)
@@ -190,7 +280,6 @@ namespace AppAPITemplate
 		{
 			string query = ConstructQuery(menuItem);
 
-			//string results = "[{ One : \"Thomas 2\", Two : \"Is the best 2\", Three : \"And number three \", Four : \"And is four too much\", Five : \"A a high five\"}]"; //string results = call query.
 			using (var client = new HttpClient())
 			{
 				var response = await client.GetStringAsync(query);
@@ -239,13 +328,18 @@ namespace AppAPITemplate
 			string sunrise = jsonResult["query"]["results"]["channel"]["astronomy"]["sunrise"].Value;
 			string sunset = jsonResult["query"]["results"]["channel"]["astronomy"]["sunset"].Value;
 			string typeOfWeather = jsonResult["query"]["results"]["channel"]["item"]["condition"]["text"].Value;
-			string time = jsonResult["query"]["results"]["channel"]["item"]["condition"]["date"].Value.ToString();
+			string temp = jsonResult["query"]["results"]["channel"]["item"]["condition"]["temp"].Value;
+
+
+			DateTime dateTime = Convert.ToDateTime(jsonResult["query"]["results"]["channel"]["item"]["condition"]["date"].Value.ToString().Substring(0, 25));
+			string time = dateTime.ToString("HH:mm") + ", " + dateTime.ToString("d MMM");
 
 			items.Add(city);
 			items.Add(time);
 			items.Add(sunset);
 			items.Add(typeOfWeather);
 			items.Add(sunrise);
+			items.Add(temp);
 
 			return items;
 

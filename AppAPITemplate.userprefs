@@ -1,7 +1,8 @@
-﻿<Properties StartupItem="iOS/AppAPITemplate.iOS.csproj">
+﻿<Properties StartupConfiguration="{F9CFF05C-68E2-412C-A22E-9993C08A5BF4}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="AppAPITemplate/InfoPage.cs">
     <Files>
-      <File FileName="AppAPITemplate/InfoPage.cs" Line="251" Column="1" />
+      <File FileName="AppAPITemplate/InfoPage.cs" Line="201" Column="50" />
+      <File FileName="../YahooFinanceAPI/AppAPITemplate/InfoPage.cs" Line="73" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -11,5 +12,5 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="AppAPITemplate/FirstMenu.cs" line="60" offsetX="521" offsetY="1066" expression="item.IEnumerator.[0].Value.Value" liveUpdate="True" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.AppAPITemplate.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.AFD3E5E1-C3AF-4164-B016-9CE6A4918365" />
+  <MonoDevelop.Ide.ItemProperties.AppAPITemplate.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1B79DD1E-215B-4CEE-85CA-FF105E5A74B4" />
 </Properties>

@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{F9CFF05C-68E2-412C-A22E-9993C08A5BF4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppAPITemplate/InfoPage.cs">
+    <Files>
+      <File FileName="AppAPITemplate/InfoPage.cs" Line="291" Column="103" />
+      <File FileName="AppAPITemplate/FirstMenu.cs" Line="14" Column="19" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/thomascartwright/Documents/Development/Xamarin/API Apps/AccuWeatherAPI/AppAPITemplate/InfoPage.cs" line="293" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="AppAPITemplate/FirstMenu.cs" line="60" offsetX="521" offsetY="1066" expression="item.IEnumerator.[0].Value.Value" liveUpdate="True" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.ItemProperties.AppAPITemplate.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1B79DD1E-215B-4CEE-85CA-FF105E5A74B4" />
+</Properties>
